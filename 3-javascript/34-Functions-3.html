@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="txtSayi" placeholder="Değerinizi giriniz">
+    <input type="button" id="btnHesapla" value="Hesapla" onclick="clickHesapla()">
+
+
+
+
+
+    <script>
+
+        // Girilen sayinin faktoriyelini bulan kodu yaziniz. 5 = 5*4*3*2*1 = 120
+        function clickHesapla(){
+            const sayi = document.querySelector("#txtSayi").value;
+            const sonuc = faktoriyel(sayi); 
+
+            if(sonuc==false){
+                alert("Lütfen 0'dan büyük bir sayi giriniz");
+                return;
+            }
+            
+            alert(sonuc);
+        }
+
+
+
+
+
+       function faktoriyel(sayi){
+        if(!sayi || isNaN(sayi) || sayi<0) return false;
+
+        let carpim = 1;
+
+        while(sayi>0){
+            carpim *= sayi;
+            sayi--;
+        }
+
+        return carpim;
+       }
+    </script>
+</body>
+</html>

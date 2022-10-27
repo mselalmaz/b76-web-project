@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="txtVize" min="0" max="100">
+    <input type="number" id="txtFinal" min="0" max="100">
+
+    <input type="button" value="Hesapla" onclick="hesapla()">
+
+    <h3 id="screen"></h3>
+    <script>
+        /*Vize ve final notlarini alip
+        gecme notunu hesaplayan programı 
+        object kullanarak yapiniz 
+        */
+       
+        function hesapla(){
+            const vize = document.querySelector("#txtVize").value;
+            const final = document.querySelector("#txtFinal").value;
+
+            if(!vize || isNaN(vize) || vize<0 || vize>100){
+                alert("Geçerli bir vize notu giriniz");
+                return;
+            }
+            
+            if(!final || isNaN(final) || vize<0 || vize>100){
+                alert("Geçerli bir final notu giriniz");
+                return;
+            }
+
+            let ortalama = vize*0.3 + final*0.7;
+
+            //1. yontem
+            const notlar = {
+                vize: vize,
+                final: final,
+                ort: ortalama
+            };
+            console.log(notlar);
+
+            /*2.yontem
+            const notlar{
+                vize: 0,
+                final: 0,
+                ort: 0
+            };
+
+            notlar.vize = vize;
+            notlar.final = final;
+            notlar.ort = ortalama;
+
+            console.log(notlar);
+            */
+            
+        }
+
+    </script>
+</body>
+</html>                 

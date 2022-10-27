@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*Boy ve kilo degerlerini alip 
+          vucut kitle endeksini bulup
+          ideal aralık disindaki degerler icin "ideal kilo degil"
+          ideal aralıkta ise "ideal kilo" mesaji veren programi yaziniz */
+
+        const boy = prompt("Boyunuzu giriniz");
+        const kilo = prompt("Kilonuzu giriniz");
+        const vki = kilo / boy ** 2
+
+        if(vki >= 18.5 && vki <=25){
+            alert("ideal kilo");
+        }else{
+            alert("ideal kilo degil");
+        }
+    </script>
+</body>
+</html>

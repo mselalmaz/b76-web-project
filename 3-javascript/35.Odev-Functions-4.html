@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtSayi" placeholder="Birinci sayiyi giriniz">
+
+    <input type="button" id="btnHesapla" value="Harf Değerini göster" onclick="clickHesapla()">
+
+    <h1 id="sonuc"></h1>
+
+
+    <script>
+        /*100lük not sistemini harf sistemine dönüştüren fonksiyonu yaziniz
+        [90-100] => A
+        [80-90]  => B
+        [70-80]  => C
+        [50-70]  => D
+        [0-50]   => F
+        */
+
+        function clickHesapla(){
+            const sayi = document.querySelector("#txtSayi").value;
+            const sonuc = harfSis(sayi);
+            if(!sonuc){
+                alert("Lütfen 0-100 arasi bir sayi giriniz");
+                return;
+            }
+
+            document.querySelector("#sonuc").innerHTML = `Harf Notu: ${sonuc}`;
+
+
+        }
+        
+        function harfSis(sayi){
+            if(!sayi || isNaN(sayi) || sayi<0 || sayi>100) return false;
+                if(sayi>=90){
+                    let a = "A";
+                    return a;
+                }
+                if(sayi>=80){
+                    let a = "B";
+                    return a;
+                }
+                if(sayi>=70){
+                    let a = "C";
+                    return a;
+                }
+                if(sayi>=50){
+                    let a = "D";
+                    return a;
+                }
+                if(sayi>=0){
+                    let a = "F";
+                    return a;
+                }
+
+
+        }
+    </script>
+</body>
+</html>
+

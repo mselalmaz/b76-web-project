@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 50 sayisini girilen sayiya bolen, bu islemi eger girilen sayi sifirdan farkli ise yapan programı yaziniz*/
+      
+      let sayi = prompt("Bir sayi giriniz");
+      if (isNaN(sayi) || sayi == 0) {
+        alert("Geçerli bir sayi giriniz");
+      } else {
+        const sonuc = 50 / sayi;
+        console.log(sonuc);
+      }
+    </script>
+  </body>
+</html>

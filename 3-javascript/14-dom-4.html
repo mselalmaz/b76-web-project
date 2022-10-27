@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        .mavi{
+            color: blue;
+        }
+
+        .bg-pembe{
+            background-color: pink;
+        }
+
+        .yaziTipi{
+            font-family: 'Gill Sans';
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="yazi" class="mavi bg-pembe">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. A consectetur,
+      consequuntur id maiores dolorem neque temporibus veritatis at quod
+      eligendi atque autem impedit beatae totam rerum pariatur libero itaque
+      illum?
+    </div>
+
+    <script>
+        const elYazi = document.querySelector("#yazi");
+        
+        elYazi.classList.add("yaziTipi");
+        console.log(elYazi.classList);
+    </script>
+  </body>
+</html>
